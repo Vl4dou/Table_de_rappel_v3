@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">table de rappel</string>
+    <string name="titre">Table de rappel</string>
+    <string name="boutonReveler">Révéler</string>
+    <string name="boutonSuivant">Suivant</string>
+    <string name="enonce">99</string>
+</resources>
