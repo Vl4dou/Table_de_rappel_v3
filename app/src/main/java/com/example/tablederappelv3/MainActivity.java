@@ -3,6 +3,7 @@ package com.example.tablederappelv3;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.ButtonBarLayout;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -41,7 +42,11 @@ public class MainActivity extends AppCompatActivity {
         this.boutonRevele.setOnClickListener(new Button.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showImage1();
+
+                Intent activeImageActivity = new Intent(getApplicationContext(), ImageActivity.class);
+                activeImageActivity.putExtra("nombrealeatoire", nombrealeatoire);
+                startActivity(activeImageActivity);
+                finish();
             }
         });
 
@@ -65,18 +70,8 @@ public class MainActivity extends AppCompatActivity {
         enonce.setText(strnombrealeatoire);
     }
 
-    private void showImage1() {
-        nomImage="img" + nombrealeatoire;
-        Log.i("enonce","Image:" + nomImage);
-        //this.image.setImageResource(R.drawable.(nomImage))
-        //iv.setImageResource(getResources().getIdentifier(variableValue, "drawable", getPackageName()))
-        this.image.setImageResource(getResources().getIdentifier(nomImage, "drawable", getPackageName()));
-    }
-
     private void showImage2() {
         this.image.setImageResource(R.drawable.img2);
     }
-
-
 
 }

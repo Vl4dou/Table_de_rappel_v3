@@ -4,4 +4,5 @@
     <string name="boutonReveler">Révéler</string>
     <string name="boutonSuivant">Suivant</string>
     <string name="enonce">99</string>
+    <string name="boutonRetour">Retour</string>
 </resources>
