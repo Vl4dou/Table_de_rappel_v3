@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.ButtonBarLayout;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -12,26 +13,30 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+    private TextView titre;
+    private TextView enonce;
     private ImageView image;
     private Button boutonRevele;
     private Button boutonSuivant;
-    private Integer nombrealeatoire;
-    private String enonce;
+
+    private int nombrealeatoire;
     private String strnombrealeatoire;
+    private String nomImage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        this.image = (ImageView) this.findViewById(R.id.image);
+        titre=(TextView) findViewById(R.id.titre);
+        enonce=(TextView) findViewById(R.id.enonce);
+        image=(ImageView) findViewById(R.id.image);
+        boutonRevele=(Button) findViewById(R.id.boutonRevele);
+        boutonSuivant=(Button) findViewById(R.id.boutonSuivant);
 
-        this.boutonRevele = (Button) this.findViewById(R.id.boutonRevele);
-        this.boutonSuivant = (Button) this.findViewById(R.id.boutonSuivant);
+        init();
 
-        this.nombrealeatoire=(int)(Math.random()*10);
-        String strnombrealeatoire = String.valueOf(nombrealeatoire);
-        TextView enonce = (strnombrealeatoire);
+        majEnonce();
 
         this.boutonRevele.setOnClickListener(new Button.OnClickListener() {
             @Override
@@ -44,17 +49,34 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                showImage2();
+                majEnonce();
             }
         });
     }
 
+    private void init(){
+
+    }
+
+    private void majEnonce(){
+        nombrealeatoire=(int)(Math.random()*2+1);
+        Log.i("DEBUG","Valeur:" + nombrealeatoire);
+        String strnombrealeatoire = String.valueOf(nombrealeatoire);
+        enonce.setText(strnombrealeatoire);
+    }
+
     private void showImage1() {
-        this.image.setImageResource(R.drawable.img1);
+        nomImage="img" + nombrealeatoire;
+        Log.i("enonce","Image:" + nomImage);
+        //this.image.setImageResource(R.drawable.(nomImage))
+        //iv.setImageResource(getResources().getIdentifier(variableValue, "drawable", getPackageName()))
+        this.image.setImageResource(getResources().getIdentifier(nomImage, "drawable", getPackageName()));
     }
 
     private void showImage2() {
         this.image.setImageResource(R.drawable.img2);
     }
+
+
 
 }
