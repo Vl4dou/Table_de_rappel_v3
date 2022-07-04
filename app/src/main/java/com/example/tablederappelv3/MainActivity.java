@@ -1,7 +1,6 @@
 package com.example.tablederappelv3;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.ButtonBarLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -64,14 +63,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void majEnonce(){
-        nombrealeatoire=(int)(Math.random()*2+1);
+        nombrealeatoire=(int)(Math.random()*10);
         Log.i("DEBUG","Valeur:" + nombrealeatoire);
         String strnombrealeatoire = String.valueOf(nombrealeatoire);
         enonce.setText(strnombrealeatoire);
     }
 
     private void showImage2() {
-        this.image.setImageResource(R.drawable.img2);
+        this.image.setImageResource(R.drawable.img02);
     }
 
 }

@@ -38,7 +38,12 @@ public class ImageActivity extends AppCompatActivity {
             Log.i("nombre","nombre:" + nombrealeatoire);
             String strnombrealeatoire = String.valueOf(nombrealeatoire);
             enonce.setText(strnombrealeatoire);
-            nomImage="img" + nombrealeatoire;
+            if (nombrealeatoire<10){
+                nomImage="img0" + nombrealeatoire;
+            }else {
+                nomImage="img" + nombrealeatoire;
+            }
+
             Log.i("enonce","Image:" + nombrealeatoire);
             this.image.setImageResource(getResources().getIdentifier(nomImage, "drawable", getPackageName()));
         }
