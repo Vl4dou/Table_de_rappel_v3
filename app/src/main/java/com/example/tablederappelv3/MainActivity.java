@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void majEnonce(){
-        nombrealeatoire=(int)(Math.random()*10);
+        nombrealeatoire=(int)(Math.random()*30);
         Log.i("DEBUG","Valeur:" + nombrealeatoire);
         String strnombrealeatoire = String.valueOf(nombrealeatoire);
         enonce.setText(strnombrealeatoire);
