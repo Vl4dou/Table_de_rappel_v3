@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 
@@ -14,7 +15,11 @@ public class TableActivity extends AppCompatActivity {
 
     private TextView titreTable;
     private Button boutonAccueil;
-
+    private ImageView image01;
+    private ImageView image02;
+    private ImageView image03;
+    private ImageView image04;
+    private ImageView image05;
 
 
     @Override
@@ -24,6 +29,13 @@ public class TableActivity extends AppCompatActivity {
 
         titreTable=(TextView) findViewById(R.id.titreTable);
         boutonAccueil=(Button) findViewById(R.id.boutonAccueil);
+        image01=(ImageView) findViewById(R.id.image01);
+        image01=(ImageView) findViewById(R.id.image02);
+        image01=(ImageView) findViewById(R.id.image03);
+        image01=(ImageView) findViewById(R.id.image04);
+        image01=(ImageView) findViewById(R.id.image05);
+
+        this.image01.setImageResource(getResources().getIdentifier("img01", "drawable", getPackageName()));
 
         this.boutonAccueil.setOnClickListener(new Button.OnClickListener() {
             @Override
