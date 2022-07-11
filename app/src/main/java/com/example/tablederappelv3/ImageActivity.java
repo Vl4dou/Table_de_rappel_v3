@@ -51,8 +51,8 @@ public class ImageActivity extends AppCompatActivity {
         this.boutonRetour.setOnClickListener(new Button.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent activeMainActivity = new Intent(getApplicationContext(), MainActivity.class);
-                startActivity(activeMainActivity);
+                Intent activeQuizzActivity = new Intent(getApplicationContext(), QuizzActivity.class);
+                startActivity(activeQuizzActivity);
                 finish();
             }
         });

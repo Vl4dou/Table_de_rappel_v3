@@ -5,4 +5,8 @@
     <string name="boutonSuivant">Suivant</string>
     <string name="enonce">99</string>
     <string name="boutonRetour">Retour</string>
+    <string name="boutonQuizz">Quizz</string>
+    <string name="boutonTable">Table</string>
+    <string name="titreTable">Ici il y aura un jour la table (j éspère!).</string>
+    <string name="boutonAccueil">Accueil</string>
 </resources>

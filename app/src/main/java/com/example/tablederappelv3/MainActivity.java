@@ -14,63 +14,37 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     private TextView titre;
-    private TextView enonce;
-    private ImageView image;
-    private Button boutonRevele;
-    private Button boutonSuivant;
-
-    private int nombrealeatoire;
-    private String strnombrealeatoire;
-    private String nomImage;
+    private Button boutonQuizz;
+    private Button boutonTable;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        titre=(TextView) findViewById(R.id.titre);
-        enonce=(TextView) findViewById(R.id.enonce);
-        image=(ImageView) findViewById(R.id.image);
-        boutonRevele=(Button) findViewById(R.id.boutonRevele);
-        boutonSuivant=(Button) findViewById(R.id.boutonSuivant);
+        titre = (TextView) findViewById(R.id.titre);
+        boutonQuizz = (Button) findViewById(R.id.boutonQuizz);
+        boutonTable = (Button) findViewById(R.id.boutonTable);
 
-        init();
 
-        majEnonce();
-
-        this.boutonRevele.setOnClickListener(new Button.OnClickListener() {
+        this.boutonQuizz.setOnClickListener(new Button.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                Intent activeImageActivity = new Intent(getApplicationContext(), ImageActivity.class);
-                activeImageActivity.putExtra("nombrealeatoire", nombrealeatoire);
-                startActivity(activeImageActivity);
+                Intent activeQuizzActivity = new Intent(getApplicationContext(), QuizzActivity.class);
+                startActivity(activeQuizzActivity);
                 finish();
             }
         });
 
-        this.boutonSuivant.setOnClickListener(new Button.OnClickListener() {
-
+        this.boutonTable.setOnClickListener(new Button.OnClickListener() {
             @Override
             public void onClick(View v) {
-                majEnonce();
+
+                Intent activeTableActivity = new Intent(getApplicationContext(), TableActivity.class);
+                startActivity(activeTableActivity);
+                finish();
             }
         });
     }
-
-    private void init(){
-
-    }
-
-    private void majEnonce(){
-        nombrealeatoire=(int)(Math.random()*30);
-        Log.i("DEBUG","Valeur:" + nombrealeatoire);
-        String strnombrealeatoire = String.valueOf(nombrealeatoire);
-        enonce.setText(strnombrealeatoire);
-    }
-
-    private void showImage2() {
-        this.image.setImageResource(R.drawable.img02);
-    }
-
 }
