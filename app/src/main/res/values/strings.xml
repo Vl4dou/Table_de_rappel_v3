@@ -9,4 +9,8 @@
     <string name="boutonTable">Table</string>
     <string name="titreTable">Ici il y aura un jour la table (j éspère!).</string>
     <string name="boutonAccueil">Accueil</string>
+    <string name="nom_image_table">Tintin</string>
+    <string name="debut_image_table">T</string>
+    <string name="fin_image_table">in</string>
+    <string name="numeroImageTable">11</string>
 </resources>

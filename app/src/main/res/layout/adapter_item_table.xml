@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageTable"
+        android:layout_width="130dp"
+        android:layout_height="90dp"
+        android:src="@drawable/img11" />
+
+    <RelativeLayout
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="90dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/numeroImageTable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/numeroImageTable"
+            android:textColor="@color/design_default_color_primary"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/nomImageTable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/nom_image_table"
+            android:textColor="@color/design_default_color_primary"
+            android:textSize="15dp"
+            android:layout_below="@id/numeroImageTable"/>
+
+        <TextView
+            android:id="@+id/debut_image_table"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/debut_image_table"
+            android:textSize="15dp"
+            android:layout_below="@id/nomImageTable"/>
+
+        <TextView
+            android:id="@+id/fin_image_table"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fin_image_table"
+            android:textSize="15dp"
+            android:layout_below="@id/debut_image_table"/>
+
+
+
+
+    </RelativeLayout>
+
+</LinearLayout>
