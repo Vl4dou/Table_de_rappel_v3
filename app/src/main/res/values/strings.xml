@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">table de rappel</string>
+    <string name="app_name">Table de rappel</string>
     <string name="titre">Table de rappel</string>
     <string name="boutonReveler">Révéler</string>
     <string name="boutonSuivant">Suivant</string>
@@ -13,4 +13,6 @@
     <string name="debut_image_table">T</string>
     <string name="fin_image_table">in</string>
     <string name="numeroImageTable">11</string>
+    <string name="bouton_cest_quoi">C\'est quoi?</string>
+    <string name="bouton_regles">Les règles</string>
 </resources>

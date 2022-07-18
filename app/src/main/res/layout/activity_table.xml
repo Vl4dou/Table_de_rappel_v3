@@ -4,12 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/fond"
     tools:context=".TableActivity">
 
-    <ListView
+    <GridView
         android:id="@+id/TableGridView"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:horizontalSpacing="5dp"
+        android:verticalSpacing="5dp"
+        android:numColumns="2"
         />
 
     <LinearLayout
@@ -63,16 +68,6 @@
             android:layout_marginBottom="1dp"/>
 
     </LinearLayout>
-
-    <TextView
-        android:id="@+id/titreTable"
-        android:text="@string/titreTable"
-        android:textColor="@color/police"
-        android:textSize="40dp"
-        android:gravity="center"
-        android:layout_margin="40dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
 
     <Button
         android:id="@+id/boutonAccueil"

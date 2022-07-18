@@ -9,4 +9,11 @@
     <color name="white">#FFFFFFFF</color>
     <color name="fond">#F2F3F4 </color>
     <color name="police">#1C2833 </color>
+    <color name="principale">#3F3E3E</color>
+    <color name="variante_principale">#7E000000</color>
+    <color name="sur_principale">#FFFFFF</color>
+    <color name="secondaire">#FF5722</color>
+    <color name="variante_secondiare">#FF9800</color>
+    <color name="sur_secondaire">#1C2833 </color>
+
 </resources>

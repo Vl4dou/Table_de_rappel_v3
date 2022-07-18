@@ -6,32 +6,104 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/sur_principale"
+    android:gravity="center">
 
-    <TextView
-        android:id="@+id/titre"
-        android:text="@string/titre"
-        android:textSize="30dp"
-        android:layout_margin="20dp"
-        android:gravity="center_horizontal"
-        android:textColor="@color/black"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        />
+    <androidx.cardview.widget.CardView
+        android:layout_width="320dp"
+        android:layout_height="100dp"
+        app:cardElevation="16dp"
+        app:cardCornerRadius="5dp"
+        android:layout_marginTop="20dp">
+
+        <android.widget.Button
+            android:id="@+id/bouton_cest_quoi"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/cest_quoi3"
+            android:elevation="160dp"
+            android:gravity="left"
+            android:paddingLeft="5dp"
+            android:text="@string/bouton_cest_quoi"
+            android:textColor="@color/variante_principale"
+            android:textSize="45dp"
+            android:translationZ="160dp" />
 
 
-    <Button
-        android:id="@+id/boutonQuizz"
-        android:text="@string/boutonQuizz"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"/>
+    </androidx.cardview.widget.CardView>
 
-    <Button
-        android:id="@+id/boutonTable"
-        android:text="@string/boutonTable"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"/>
+    <androidx.cardview.widget.CardView
+        android:layout_width="320dp"
+        android:layout_height="100dp"
+        app:cardElevation="16dp"
+        app:cardCornerRadius="5dp"
+        android:layout_marginTop="20dp">
+
+        <android.widget.Button
+            android:id="@+id/bouton_regles"
+            android:text="@string/bouton_regles"
+            android:paddingLeft="5dp"
+            android:textSize="45dp"
+            android:gravity="left"
+            android:textColor="@color/variante_principale"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="160dp"
+            android:translationZ="160dp"
+            android:background="@drawable/regles"/>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="320dp"
+        android:layout_height="100dp"
+        app:cardElevation="16dp"
+        app:cardCornerRadius="5dp"
+        android:layout_marginTop="20dp">
+
+        <android.widget.Button
+            android:id="@+id/boutonTable"
+            android:text="@string/boutonTable"
+            android:paddingLeft="5dp"
+            android:textSize="45dp"
+            android:gravity="left"
+            android:textColor="@color/variante_principale"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/table"/>
+
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="320dp"
+        android:layout_height="100dp"
+        app:cardElevation="16dp"
+        app:cardCornerRadius="5dp"
+        android:layout_marginTop="20dp">
+
+        <android.widget.Button
+            android:id="@+id/boutonQuizz"
+            android:text="@string/boutonQuizz"
+            android:paddingLeft="5dp"
+            android:textSize="45dp"
+            android:gravity="left"
+            android:textColor="@color/variante_principale"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="160dp"
+            android:translationZ="160dp"
+            android:background="@drawable/quizz2"/>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+
 
 </LinearLayout>

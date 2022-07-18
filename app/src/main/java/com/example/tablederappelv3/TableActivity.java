@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -35,7 +36,8 @@ public class TableActivity extends AppCompatActivity {
         //Liste d'item
 
         List<case_table> case_tableList= new ArrayList<>();
-        case_tableList.add(new case_table("01", "Roue", "_", "_"));
+        case_tableList.add(new case_table("00", "Roue", "_", "_"));
+        case_tableList.add(new case_table("01", "Bougie", "_", "_"));
         case_tableList.add(new case_table("02", "Cygne", "_", "_"));
         case_tableList.add(new case_table("03", "Cochon", "_", "_"));
         case_tableList.add(new case_table("04", "Dartagnan", "_", "_"));
@@ -67,7 +69,7 @@ public class TableActivity extends AppCompatActivity {
 
 
         // get List view
-        ListView TableGridView = findViewById(R.id.TableGridView);
+        GridView TableGridView = findViewById(R.id.TableGridView);
         TableGridView.setAdapter(new case_table_adapter(this,case_tableList));
 
     }
